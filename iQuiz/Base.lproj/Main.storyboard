@@ -1,23 +1,51 @@
-<?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11134" systemVersion="15F34" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="12120" systemVersion="16E195" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina3_5" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11106"/>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="12088"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
         <!--View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="iQuiz" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
                         <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="480"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <toolbar opaque="NO" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="H51-2R-NKg">
+                                <rect key="frame" x="0.0" y="30" width="320" height="44"/>
+                                <items>
+                                    <barButtonItem title="Setting" id="fEs-oO-CCz"/>
+                                </items>
+                            </toolbar>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="KIO-JB-whk">
+                                <rect key="frame" x="0.0" y="74" width="320" height="406"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                            </tableView>
+                        </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="KIO-JB-whk" firstAttribute="top" secondItem="H51-2R-NKg" secondAttribute="bottom" id="Fhc-eQ-wsJ"/>
+                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="KIO-JB-whk" secondAttribute="bottom" id="GLc-iN-0Hx"/>
+                            <constraint firstAttribute="trailing" secondItem="KIO-JB-whk" secondAttribute="trailing" id="GSm-1H-jsl"/>
+                            <constraint firstItem="H51-2R-NKg" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" constant="30" id="J3m-px-ET5"/>
+                            <constraint firstItem="H51-2R-NKg" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="RBS-wZ-2C0"/>
+                            <constraint firstItem="KIO-JB-whk" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="tVY-tS-Rfj"/>
+                            <constraint firstAttribute="trailing" secondItem="H51-2R-NKg" secondAttribute="trailing" id="vAq-j9-Ffy"/>
+                        </constraints>
                     </view>
+                    <connections>
+                        <outlet property="tableView" destination="KIO-JB-whk" id="Zb0-vQ-F55"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
