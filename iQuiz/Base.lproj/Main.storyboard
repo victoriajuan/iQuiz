@@ -24,7 +24,11 @@
                             <toolbar opaque="NO" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="H51-2R-NKg">
                                 <rect key="frame" x="0.0" y="30" width="320" height="44"/>
                                 <items>
-                                    <barButtonItem title="Setting" id="fEs-oO-CCz"/>
+                                    <barButtonItem title="Setting" id="fEs-oO-CCz">
+                                        <connections>
+                                            <action selector="SettingAlert:" destination="BYZ-38-t0r" id="Gtb-wY-x2Q"/>
+                                        </connections>
+                                    </barButtonItem>
                                 </items>
                             </toolbar>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="KIO-JB-whk">

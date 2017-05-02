@@ -41,11 +41,18 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
         let cell = UITableViewCell(style: UITableViewCellStyle.subtitle, reuseIdentifier: "cell")
         cell.textLabel?.text = data[indexPath.row].subject
         cell.detailTextLabel?.text = data[indexPath.row].description
-        let image : UIImage = UIImage(named: data[indexPath.row].image)!;
-        cell.imageView?.image = image;
+        cell.imageView?.image = (UIImage(named: data[indexPath.row].image)!);
         return cell
     }
 
+    @IBAction func SettingAlert(_ sender: Any) {
+        let alert = UIAlertController(title: "Setting", message: "Settings go here", preferredStyle: .alert)
+        
+        alert.addAction(UIAlertAction(title: "OK", style: .cancel, handler: nil));
+        
+        self.present(alert, animated: true);
+
+    }
 
 
 }
