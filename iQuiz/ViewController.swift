@@ -15,14 +15,16 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
     struct dataStructure {
         var subject: String
         var description: String
+        var image: String
         
-        init(subject: String, description: String) {
+        init(subject: String, description: String, image: String) {
             self.subject = subject
             self.description = description
+            self.image = image
         }
     }
     
-    var data = [dataStructure(subject: "Mathematic", description: "I hate math"), dataStructure(subject: "Marvel Super Heroes", description: "I don't like super heros"), dataStructure(subject: "Science", description: "I hate science too")];
+    var data = [dataStructure(subject: "Mathematic", description: "I hate math", image: "image.jpg"), dataStructure(subject: "Marvel Super Heroes", description: "I don't like super heros", image: "image.jpg"), dataStructure(subject: "Science", description: "I hate science too", image: "image.jpg")];
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -39,6 +41,8 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
         let cell = UITableViewCell(style: UITableViewCellStyle.subtitle, reuseIdentifier: "cell")
         cell.textLabel?.text = data[indexPath.row].subject
         cell.detailTextLabel?.text = data[indexPath.row].description
+        let image : UIImage = UIImage(named: data[indexPath.row].image)!;
+        cell.imageView?.image = image;
         return cell
     }
 
