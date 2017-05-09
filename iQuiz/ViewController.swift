@@ -31,7 +31,6 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
     let scienceQuestion = [QuestionItem(Question: "Which of the below is not a primitive type in Java", Answers: ["int", "char", "boolean", "String"], Correct: "String")]
     
     
-    
     override func viewDidLoad() {
         super.viewDidLoad()
         
