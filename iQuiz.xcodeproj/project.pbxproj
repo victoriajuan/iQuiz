@@ -14,6 +14,12 @@
 		588547C51EB8588400EAA658 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 588547C31EB8588400EAA658 /* LaunchScreen.storyboard */; };
 		588547D01EB8588400EAA658 /* iQuizTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 588547CF1EB8588400EAA658 /* iQuizTests.swift */; };
 		588547DB1EB8588500EAA658 /* iQuizUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 588547DA1EB8588500EAA658 /* iQuizUITests.swift */; };
+		588547E91EB91A8100EAA658 /* image.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 588547E81EB91A8100EAA658 /* image.jpg */; };
+		58E399B21EC23758009567AA /* QuestionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 58E399B11EC23758009567AA /* QuestionViewController.swift */; };
+		58E399B41EC237DF009567AA /* AnswerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 58E399B31EC237DF009567AA /* AnswerViewController.swift */; };
+		58E399B61EC237F1009567AA /* FinishViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 58E399B51EC237F1009567AA /* FinishViewController.swift */; };
+		58E399B81EC256A4009567AA /* TableCellItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 58E399B71EC256A4009567AA /* TableCellItem.swift */; };
+		58E399BA1EC256CD009567AA /* QuestionItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 58E399B91EC256CD009567AA /* QuestionItem.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -47,6 +53,12 @@
 		588547D61EB8588400EAA658 /* iQuizUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = iQuizUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		588547DA1EB8588500EAA658 /* iQuizUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = iQuizUITests.swift; sourceTree = "<group>"; };
 		588547DC1EB8588500EAA658 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		588547E81EB91A8100EAA658 /* image.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = image.jpg; sourceTree = "<group>"; };
+		58E399B11EC23758009567AA /* QuestionViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = QuestionViewController.swift; sourceTree = "<group>"; };
+		58E399B31EC237DF009567AA /* AnswerViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AnswerViewController.swift; sourceTree = "<group>"; };
+		58E399B51EC237F1009567AA /* FinishViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FinishViewController.swift; sourceTree = "<group>"; };
+		58E399B71EC256A4009567AA /* TableCellItem.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TableCellItem.swift; sourceTree = "<group>"; };
+		58E399B91EC256CD009567AA /* QuestionItem.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = QuestionItem.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -99,10 +111,16 @@
 			children = (
 				588547BA1EB8588400EAA658 /* AppDelegate.swift */,
 				588547BC1EB8588400EAA658 /* ViewController.swift */,
+				58E399B71EC256A4009567AA /* TableCellItem.swift */,
+				58E399B91EC256CD009567AA /* QuestionItem.swift */,
 				588547BE1EB8588400EAA658 /* Main.storyboard */,
+				58E399B31EC237DF009567AA /* AnswerViewController.swift */,
+				58E399B51EC237F1009567AA /* FinishViewController.swift */,
+				58E399B11EC23758009567AA /* QuestionViewController.swift */,
 				588547C11EB8588400EAA658 /* Assets.xcassets */,
 				588547C31EB8588400EAA658 /* LaunchScreen.storyboard */,
 				588547C61EB8588400EAA658 /* Info.plist */,
+				588547E81EB91A8100EAA658 /* image.jpg */,
 			);
 			path = iQuiz;
 			sourceTree = "<group>";
@@ -237,6 +255,7 @@
 			files = (
 				588547C51EB8588400EAA658 /* LaunchScreen.storyboard in Resources */,
 				588547C21EB8588400EAA658 /* Assets.xcassets in Resources */,
+				588547E91EB91A8100EAA658 /* image.jpg in Resources */,
 				588547C01EB8588400EAA658 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -262,8 +281,13 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				58E399B61EC237F1009567AA /* FinishViewController.swift in Sources */,
+				58E399B41EC237DF009567AA /* AnswerViewController.swift in Sources */,
 				588547BD1EB8588400EAA658 /* ViewController.swift in Sources */,
+				58E399BA1EC256CD009567AA /* QuestionItem.swift in Sources */,
+				58E399B81EC256A4009567AA /* TableCellItem.swift in Sources */,
 				588547BB1EB8588400EAA658 /* AppDelegate.swift in Sources */,
+				58E399B21EC23758009567AA /* QuestionViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -516,6 +540,7 @@
 				588547E11EB8588500EAA658 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		588547E21EB8588500EAA658 /* Build configuration list for PBXNativeTarget "iQuizTests" */ = {
 			isa = XCConfigurationList;
@@ -524,6 +549,7 @@
 				588547E41EB8588500EAA658 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		588547E51EB8588500EAA658 /* Build configuration list for PBXNativeTarget "iQuizUITests" */ = {
 			isa = XCConfigurationList;
@@ -532,6 +558,7 @@
 				588547E71EB8588500EAA658 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
