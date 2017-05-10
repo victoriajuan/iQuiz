@@ -9,9 +9,21 @@
 import UIKit
 
 class FinishViewController: UIViewController {
+    @IBOutlet weak var FinalText: UILabel!
+    @IBOutlet weak var finalScore: UILabel!
+    
+    var correctness: Int = 0
 
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        if correctness == 0 {
+            FinalText.text = "Keep doing"
+        }else {
+            FinalText.text = "Excellent"
+        }
+        
+        finalScore.text = "\(correctness) out of  \(1)"
 
         // Do any additional setup after loading the view.
     }

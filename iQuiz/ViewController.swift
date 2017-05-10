@@ -36,7 +36,6 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
         
         tableView.delegate = self
         tableView.dataSource = self
-        
 
     }
     
@@ -61,8 +60,15 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
 
     }
     
+    var cellSelected: Int = 0
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        performSegue(withIdentifier: <#T##String#>, sender: <#T##Any?#>)
+        cellSelected = indexPath.row
+        performSegue(withIdentifier: "questionSegue", sender: data[cellSelected])
+    }
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        let QuestionSegue = segue.destination as! QuestionViewController
+        QuestionSegue.quizObject = sender as? QuestionItem
     }
 
 
